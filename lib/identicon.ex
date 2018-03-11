@@ -61,8 +61,7 @@ defmodule Identicon do
     File.write("#{input}.png", image)
   end
 
-  def mirror_row(row) do
-    [first, second, _third] = row
+  def mirror_row([first, second, _third] = row) do
     row ++ [second, first]
   end
 
